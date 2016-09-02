@@ -1,5 +1,7 @@
 # Matilha Comoditize
 
+A project based on Ionic Framework that uses components architecture
+
 #To do List:
 - clean up and put tabsmenu into standards
 - create a config file to route views and segregate side menu from tab menu
@@ -13,9 +15,6 @@ How create a new module:
 3. View
 4. Controller / Service
 5. Test
-
-
-
 
 
 1. Base app Bootstraping
