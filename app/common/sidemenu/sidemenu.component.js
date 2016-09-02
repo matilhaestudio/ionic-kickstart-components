@@ -1,21 +1,10 @@
-angular
-  .module('common', [
-    'ui.router',
-    //'angular-loading-bar'
-  ])
-  // .run(function ($transitions, cfpLoadingBar) {
-  //   $transitions.onStart({}, cfpLoadingBar.start);
-  //   $transitions.onSuccess({}, cfpLoadingBar.complete);
-  // });
-
-
 var sidemenu = {
   templateUrl: 'sidemenu/menu.html',
 };
 
 angular
   .module('common')
-  //.component('sidemenu', sidemenu)
+  .component('sidemenu', sidemenu)
   .config(function ($stateProvider, $urlRouterProvider) {
 
     // ROUTING with ui.router
@@ -25,7 +14,8 @@ angular
       .state('main', {
         url: '/main',
         abstract: true,
-        templateUrl: 'sidemenu/menu.html'
+        template: '<sidemenu></sidemenu>'
+        //templateUrl: 'sidemenu/menu.html'
         //component: 'sidemenu'
       })
         .state('main.list', {

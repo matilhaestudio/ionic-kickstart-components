@@ -1,15 +1,9 @@
-angular
-  .module('components', [
-    'ui.router',
-    //'angular-loading-bar'
-  ])
-
 var test = {
-  templateUrl: 'components/test.html'
+  templateUrl: 'components/test/test.html'
 };
 
 angular
-  .module('components')
+  .module('components.test')
   .component('test', test)
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
