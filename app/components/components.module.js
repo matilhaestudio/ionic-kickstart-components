@@ -1,4 +1,5 @@
 angular
   .module('components', [
-    'components.test'
+    'components.test',
+    'components.pages'
   ])

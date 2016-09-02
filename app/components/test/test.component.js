@@ -1,5 +1,6 @@
 var test = {
-  templateUrl: './test.html'
+  templateUrl: './test.html',
+  controller: 'TestController'
 };
 
 angular
