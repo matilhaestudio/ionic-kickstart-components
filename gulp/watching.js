@@ -49,10 +49,12 @@ gulp.task('watch', ['inject-all'], function () {
     if (event.type === 'changed') {
       bs.reload();
       gulp.start('linting');
+      gulp.start('templating');
     }
     else { // added or deleted
       // inject in index (implicitly reloads)
       gulp.start('inject-all');
+      gulp.start('templating');
     }
   });
   // watch for changes in scss

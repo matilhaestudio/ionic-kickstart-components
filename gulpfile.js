@@ -4,6 +4,8 @@ var minimist = require('minimist');
 var requireDir = require('require-dir');
 var chalk = require('chalk');
 var fs = require('fs');
+var templateCache = require('gulp-angular-templatecache');
+var path = require('path');
 
 // config
 var paths = gulp.paths = {
@@ -13,10 +15,11 @@ var paths = gulp.paths = {
   jsonFiles: ['app/**/*.json', '!app/bower_components/**/*.json'],
   scssFiles: ['app/*/styles/**/*.scss'],
   cssFiles: ['.tmp/*/styles/*.css'],
-  templates: ['app/*/templates/**/*'],
+  //templates: ['app/*/templates/**/*'],
   contrib: ['gulpfile.js', 'gulp/**/*.js', 'hooks/**/*.js'],
   karma: ['test/karma/**/*.js'],
-  protractor: ['test/protractor/**/*.js']
+  protractor: ['test/protractor/**/*.js'],
+  templates: ['app/**/*.html', '!app/bower_components/**/*.html', '!app/index.html']
 };
 paths.watchFiles = paths.jsFiles
   .concat([
@@ -68,6 +71,19 @@ if (options.cordova) {
 
 // load tasks
 requireDir('./gulp');
+
+//Add to template cache
+gulp.task('templating', function () {
+  return gulp.src(paths.templates)
+    .pipe(templateCache({
+      //root: 'app',
+      standalone: true,
+      transformUrl: function (url) {
+        return url.replace(path.dirname(url), '.');
+      }
+    }))
+    .pipe(gulp.dest('./app'));
+});
 
 // default task
 gulp.task('default', function () {

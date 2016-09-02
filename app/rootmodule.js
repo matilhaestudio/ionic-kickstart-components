@@ -4,5 +4,6 @@ angular.module('matilhaComoditize', [
   'ngCordova',
   'ui.router',
   'common',
-  'components' // starting with the main module
+  'components',
+  'templates' // starting with the main module
 ]);
