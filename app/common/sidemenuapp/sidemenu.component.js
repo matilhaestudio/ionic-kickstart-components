@@ -31,7 +31,7 @@ angular
         url: '/account',
         views: {
           'pageContent': {
-            templateUrl: './account.html'
+            templateUrl: './accountview.html'
           }
         }
       })
