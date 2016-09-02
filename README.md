@@ -1,15 +1,19 @@
 # Matilha Comoditize
 
-A project based on Ionic Framework that uses components architecture
+A project based on Ionic Framework that uses components architecturegit push -u origin master
 
-#To do List:
+##Already done:
+- Ionic side menu mode component
+- Ionic tab menu mode component
+
+##To do List:
 - clean up and put tabsmenu into standards
 - create a config file to route views and segregate side menu from tab menu
 - plugin login components
 
                 
 
-How create a new module:
+##How create a new module:
 1. Component
 2. Route / Call
 3. View
@@ -17,36 +21,35 @@ How create a new module:
 5. Test
 
 
-1. Base app Bootstraping
+## This project should provide a base app bootstraping with:
 
-- Ionic Integration
+- Ionic 
 - Create ENV vars and injection
-- Document launch steps
-- Clean gulp tasks
-- Document gulp tasks
-- Update .gitignore
-- Comon components
+- Documentation of launch steps
+- Clear gulp tasks
+- Documented gulp tasks
+- Updated .gitignore
+- Comon testable components:
   - Login
   - Logout
   - Social Login
   - Onboarding
-  - API
-  - User 
-  - Feed
-  - Push
-  - Menus
-  - Tabs
+  - API module
+  - Account page
+  - Feed page
+  - Push Notification integration
+  - Ready to go menus
   - Local Storage
   - Social Sharing
-  - Páginas padrão:
-    - Termos de uso
-    - Política de privacidade
+  - Modal factories
+  - Form validation
+  - Common app pages:
+    - Use terms
+    - Privacy Policy
     - Help
-    - Faq
-    - Modal Factory
+    - FAQ
 
-
-2. App CI
+##For the future App CI
 
 - Code climate integration
 - Husky Hooks
