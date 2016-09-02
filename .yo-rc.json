@@ -1,0 +1,19 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "Matilha Comoditize",
+      "appId": "com.matiha.comoditize",
+      "ionicCss": false,
+      "bowerPackages": [],
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "plugins": [],
+      "appModule": "matilhaComoditize",
+      "ecosystems": [
+        "ionic-platform"
+      ]
+    }
+  }
+}
