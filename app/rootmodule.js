@@ -5,5 +5,5 @@ angular.module('matilhaComoditize', [
   'ui.router',
   'common',
   'components',
-  'templates' // starting with the main module
+  'templates' 
 ]);

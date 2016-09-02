@@ -6,22 +6,28 @@ angular
   .module('common.sidemenuapp')
   .component('sideMenuApp', sideMenuApp)
   .config(function ($stateProvider, $urlRouterProvider) {
-
-    // ROUTING with ui.router
-    $urlRouterProvider.otherwise('/main/list');
+    $urlRouterProvider.otherwise('/app/list');
     $stateProvider
-      // this state is placed in the <ion-nav-view> in the index.html
-      .state('main', {
-        url: '/main',
+      .state('app', {
+        url: '/app',
         abstract: true,
         template: '<side-menu-app></side-menu-app>'
       })
-      .state('main.list', {
+      .state('app.list', {
         url: '/list',
         views: {
           'pageContent': {
             templateUrl: './list.html'
           }
         }
+      })
+      .state('app.test', {
+        url: '/test',
+        views: {
+            'pageContent': {
+               template: '<test></test>'
+            }
+          }
+        
       })
   });
