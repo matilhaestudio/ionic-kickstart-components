@@ -1,6 +1,10 @@
 # Matilha Comoditize
 
-#Structe
+#To do List:
+- clean up and put tabsmenu into standards
+- create a config file to route views and segregate side menu from tab menu
+- plugin login components
+
                 
 
 How create a new module:
@@ -12,7 +16,6 @@ How create a new module:
 
 
 
-To do List:
 
 
 1. Base app Bootstraping
