@@ -1,0 +1,10 @@
+<form name="authForm" novalidate ng-submit="$ctrl.submitForm();">
+  <div class="auth-button">
+    <button type="submit" >
+      Facebook Login
+    </button>
+  </div>
+  <div ng-if="$ctrl.message">
+    {{ $ctrl.message }}
+  </div>
+</form>

@@ -1,7 +1,7 @@
 angular
   .module('common', [
-    //'common.sidemenuapp',
-    'common.tabsmenuapp'
+    'common.sidemenuapp',
+    //'common.tabsmenuapp'
     //'angular-loading-bar'
   ])
   // .run(function ($transitions, cfpLoadingBar) {
