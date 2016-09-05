@@ -16,7 +16,7 @@ This is a project based on Ionic Framework that uses components architecture. Th
 
 ##To do List:
 - add ionic sass file - Done!
-- clean up and put tabsmenu into standards
+- clean up and put tabsmenu into standards - Done!
 - create a config file to route views and segregate side menu from tab menu
 - plugin login components
 

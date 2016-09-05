@@ -1,10 +1,13 @@
-'use strict';
-angular.module('common.tabsmenu', [
-  'ui.router'
-])
-.config(function ($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/app/main');
-  $stateProvider
+angular
+  .module('common.tabsmenuapp')
+  .config(function ($stateProvider, $urlRouterProvider) {
+
+    /*
+        PLEASE INCLUDE ONLY MAIN MENU ROUTES
+    */
+
+    $urlRouterProvider.otherwise('/app/main');
+    $stateProvider
     .state('app', {
       url: '/app',
       abstract: true,
@@ -24,4 +27,7 @@ angular.module('common.tabsmenu', [
           templateUrl: './accountview.html'
         }
     }});
-});
+     
+  });
+
+
