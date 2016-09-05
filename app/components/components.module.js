@@ -1,5 +1,6 @@
 angular
   .module('components', [
     'components.test',
-    'components.pages'
+    'components.pages',
+    'components.auth'
   ])
