@@ -2,10 +2,10 @@
 
 Comoditize - A silly word created by us that means 'to make a commodity', turn something into an asset that does not have a process of alteration or an asset that is not different. Here is why:
 
-We believe that the biggest part of an app code should never be coded again. 
-We believe that's more than a ctrl+c and ctrl+v. 
-We are talking about plug code parts into each other easily, seeing them as commodities.
-We can do that and also keeps the user experience relavant and diferentiated for each distinc project.
+- We believe that the biggest part of an app code should never be coded again. 
+- We believe that's more than a ctrl+c and ctrl+v. 
+- We are talking about plug code parts into each other easily, seeing them as commodities.
+- We can do that and also keeps the user experience relavant and diferentiated for each distinc project.
 
 
 This is a project based on Ionic Framework that uses components architecture. This project aims to provide codes for the most common features for mobile and web apps. We are currently launching this project and it is not stable at all. 
@@ -66,5 +66,10 @@ This is a project based on Ionic Framework that uses components architecture. Th
   - User creation and access holes
 - Code climate integration for mobile and web server
 - Husky Hooks
+
+##
+This project is based in projects like:
+https://github.com/mwaylabs/generator-m-ionic
+
 
 
