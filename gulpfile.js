@@ -11,7 +11,7 @@ var path = require('path');
 var paths = gulp.paths = {
   bowerComponents: 'app/bower_components',
   dist: 'www',
-  jsFiles: ['app/**/*.js', '!app/bower_components/**/*.js'],
+  jsFiles: ['app/**/*.js', '!app/**/*.spec.js', '!app/bower_components/**/*.js'],
   jsonFiles: ['app/**/*.json', '!app/bower_components/**/*.json'],
   scssFiles: ['app/styles/*.scss'],
   cssFiles: ['.tmp/*.css'],
