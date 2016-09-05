@@ -7,6 +7,7 @@ A project based on Ionic Framework that uses components architecturegit push -u 
 - Ionic tab menu mode component
 
 ##To do List:
+- add ionic sass file
 - clean up and put tabsmenu into standards
 - create a config file to route views and segregate side menu from tab menu
 - plugin login components

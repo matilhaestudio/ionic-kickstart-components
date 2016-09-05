@@ -36,11 +36,11 @@ gulp.task('inject-all', ['styles', 'wiredep', 'bower-fonts', 'environment', 'bui
 gulp.task('styles', ['clean'], function () {
 
   // compile css starting from each module's scss
-  return gulp.src('app/*/styles/!(_)*.scss')
+  return gulp.src('app/styles/!(_)*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync().on('error', $.sass.logError))
-    .pipe($.sourcemaps.write())
+    .pipe($.sourcemaps.write({sourceRoot: '../app'}))
     .pipe($.autoprefixer({ browsers: ['last 2 versions'], remove: false}))
     .pipe(gulp.dest('.tmp/'));
 });
@@ -57,9 +57,9 @@ gulp.task('wiredep', function () {
 // copy bower fonts
 gulp.task('bower-fonts', function () {
   // to app/main/assets/fonts (path can be set in app/main/styles/<module>.scss)
-  var DEST = 'app/main/assets/fonts';
+  var DEST = 'app/fonts';
   var fontFiles = mainBowerFiles({filter: /\.(eot|otf|svg|ttf|woff|woff2)$/i})
-    .concat('app/main/assets/fonts/**/*');
+    .concat('app/fonts/**/*');
 
   return gulp.src(fontFiles)
     .pipe($.changed(DEST))
