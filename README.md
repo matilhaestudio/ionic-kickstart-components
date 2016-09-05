@@ -1,6 +1,6 @@
 # Matilha Comoditize
 
-A project based on Ionic Framework that uses components architecturegit push -u origin master
+A project based on Ionic Framework that uses components architecture. This project aims to provide codes for the most common features for mobile and web apps. 
 
 ##Already done:
 - Ionic side menu mode component
