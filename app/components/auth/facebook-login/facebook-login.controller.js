@@ -1,4 +1,6 @@
-function FacebookLoginController() {
+'use strict';
+
+function FacebookLoginController () {
   var ctrl = this;
   ctrl.$onChanges = function (changes) {
     if (changes.user) {

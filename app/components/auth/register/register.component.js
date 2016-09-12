@@ -1,3 +1,5 @@
+'use strict';
+
 var register = {
   templateUrl: './register.html',
   controller: 'RegisterController'

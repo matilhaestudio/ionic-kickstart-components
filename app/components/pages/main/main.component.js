@@ -1,3 +1,5 @@
+'use strict';
+
 var main = {
   templateUrl: './main.html'
 };

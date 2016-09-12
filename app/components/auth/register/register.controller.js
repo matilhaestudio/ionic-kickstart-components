@@ -1,4 +1,6 @@
-function RegisterController(AuthService, $state) {
+'use strict';
+
+function RegisterController (AuthService, $state) {
   var ctrl = this;
   ctrl.$onInit = function () {
     ctrl.error = null;

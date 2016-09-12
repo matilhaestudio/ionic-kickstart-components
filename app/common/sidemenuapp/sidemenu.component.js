@@ -1,3 +1,5 @@
+'use strict';
+
 var sideMenuApp = {
   templateUrl: './menu.html',
 };
@@ -21,11 +23,10 @@ angular
       .state('app.main', {
         url: '/main',
         views: {
-            'pageContent': {
-               templateUrl: './mainview.html'
-            }
+          'pageContent': {
+            templateUrl: './mainview.html'
           }
-        
+        }
       })
       .state('app.account', {
         url: '/account',
@@ -34,6 +35,5 @@ angular
             templateUrl: './accountview.html'
           }
         }
-      })
-     
+      });
   });

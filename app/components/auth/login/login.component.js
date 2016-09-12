@@ -1,3 +1,5 @@
+'use strict';
+
 var login = {
   templateUrl: './login.html',
   controller: 'LoginController'

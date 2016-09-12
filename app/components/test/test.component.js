@@ -1,8 +1,8 @@
+'use strict';
+
 var test = {
   templateUrl: './test.html',
   controller: 'TestController'
 };
 
-angular
-  .module('components.test')
-  .component('test', test);
+angular.module('components.test').component('test', test);

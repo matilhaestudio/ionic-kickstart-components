@@ -1,6 +1,7 @@
-angular
-  .module('components', [
-    'components.test',
-    'components.pages',
-    'components.auth'
-  ])
+'use strict';
+
+angular.module('components', [
+  'components.test',
+  'components.pages',
+  'components.auth'
+]);
