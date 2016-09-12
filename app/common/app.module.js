@@ -3,7 +3,7 @@ angular
     'common.sidemenuapp',
     //'common.tabsmenuapp'
     //'angular-loading-bar'
-    'components'
+    //'components'
   ])
   // .run(function ($transitions, cfpLoadingBar) {
   //   $transitions.onStart({}, cfpLoadingBar.start);

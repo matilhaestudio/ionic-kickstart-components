@@ -11,7 +11,7 @@ angular
         PLEASE INCLUDE ONLY MAIN MENU ROUTES
     */
 
-    //$urlRouterProvider.otherwise('/app/main');
+    $urlRouterProvider.otherwise('/app/main');
     $stateProvider
       .state('app', {
         url: '/app',
