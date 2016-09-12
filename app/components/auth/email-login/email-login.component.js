@@ -1,3 +1,5 @@
+'use strict';
+
 var emailLogin = {
   templateUrl: './email-login.html',
   controller: 'EmailLoginController'
@@ -11,5 +13,5 @@ angular
       .state('auth.email', {
         url: '/email',
         component: 'emailLogin'
-      })
+      });
   });

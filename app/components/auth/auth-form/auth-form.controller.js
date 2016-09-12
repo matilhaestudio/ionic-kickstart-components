@@ -1,4 +1,6 @@
-function AuthFormController() {
+'use strict';
+
+function AuthFormController () {
   var ctrl = this;
   ctrl.$onChanges = function (changes) {
     if (changes.user) {
@@ -14,6 +16,4 @@ function AuthFormController() {
   };
 }
 
-angular
-  .module('components.auth')
-  .controller('AuthFormController', AuthFormController);
+angular.module('components.auth').controller('AuthFormController', AuthFormController);

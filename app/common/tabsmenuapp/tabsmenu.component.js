@@ -1,6 +1,8 @@
+'use strict';
+
 angular
   .module('common.tabsmenuapp')
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider) {
 
     /*
         PLEASE INCLUDE ONLY MAIN MENU ROUTES
@@ -19,15 +21,15 @@ angular
         'tab-list': {
           templateUrl: './mainview.html'
         }
-    }})
+      }
+    })
     .state('app.account', {
       url: '/account',
       views: {
         'tab-list': {
           templateUrl: './accountview.html'
         }
-    }});
-     
+      }
+    });
+
   });
-
-

@@ -1,15 +1,18 @@
-function AuthService($firebaseAuth) {
+'use strict';
+
+function AuthService ($firebaseAuth) {
   var auth = $firebaseAuth();
   var authData = null;
-  function storeAuthData(response) {
+
+  function storeAuthData (response) {
     authData = response;
     return authData;
   }
-  function onSignIn(user) {
+  function onSignIn (user) {
     authData = user;
     return auth.$requireSignIn();
   }
-  function clearAuthData() {
+  function clearAuthData () {
     authData = null;
   }
   this.login = function (user) {

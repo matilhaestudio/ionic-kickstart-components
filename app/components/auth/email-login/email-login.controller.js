@@ -1,4 +1,6 @@
-function EmailLoginController(AuthService, $state) {
+'use strict';
+
+function EmailLoginController (AuthService, $state) {
   var ctrl = this;
   ctrl.$onInit = function () {
     ctrl.error = null;
