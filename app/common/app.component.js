@@ -20,7 +20,7 @@ angular
       // })
       .state('app.main', {
         url: '/main',
-        component: 'login'
+        component: 'account'
       })
       .state('app.register', {
         url: '/register',
