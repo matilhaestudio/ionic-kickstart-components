@@ -15,13 +15,13 @@ This is a project based on Ionic Framework and uses components architecture. Thi
 [Todd Motto Components App](https://github.com/toddmotto/angular-1-5-components-app)
 
 
-## We follow this angular styleguide
+## We follow this angular styleguide:
 [John Papa Angular's StyleGuide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 
 
-##Trello
+##Link with next steps and other features:
 
-Link with next steps and other features: [link](https://trello.com/b/zIftVbBr/matilha-app-boilerplate)
+[Trello link](https://trello.com/b/zIftVbBr/matilha-app-boilerplate)
 
 ## Dependencies
 ```
@@ -39,23 +39,16 @@ bower install
 gulp watch
 ```
 
-## Already done:
-- Ionic side menu mode component
-- Ionic tab menu mode component
-
-## To do List:
-- add ionic sass file - Done!
-- clean up and put tabsmenu into standards - Done!
-- plugin login components
-
-## Steps to create a new module:
+## How to create a new module:
 1. Component
 2. Route / Call
 3. View
 4. Controller / Service
+6. Check if your new module is matching with styleguide rules
 5. Test
 
-## This project should provide a base app bootstraping with:
+
+##This project should provide a base app bootstraping with:
 
 - Comon testable components like:
   - Login and Logout
