@@ -35,5 +35,21 @@ angular
             templateUrl: './accountview.html'
           }
         }
-      });
+      })
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'pageContent': {
+            templateUrl: './auth.login.view.html'
+          }
+        }
+      })
+      .state('app.register', {
+        url: '/register',
+        views: {
+          'pageContent': {
+            templateUrl: './auth.register.view.html'
+          }
+        }
+      })
   });

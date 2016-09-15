@@ -1,6 +1,6 @@
 'use strict';
 
 angular
-  .module('components.test', [
+  .module('components.counter', [
     'ui.router'
   ]);
