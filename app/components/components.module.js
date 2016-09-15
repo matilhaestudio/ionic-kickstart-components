@@ -2,5 +2,6 @@
 
 angular.module('components', [
   'components.auth',
-  'components.counter'
+  'components.counter',
+  'common.sidemenuapp'
 ]);
