@@ -10,6 +10,15 @@ Comoditize - A silly word created by us that means 'to make a commodity', turn s
 
 This is a project based on Ionic Framework and uses components architecture. This project aims to provide codes for the most common features for mobile and web apps. We are currently launching this project and it is not stable at all.
 
+## This project is based in projects like:
+[Ionic Generator](https://github.com/mwaylabs/generator-m-ionic)
+[Todd Motto Components App](https://github.com/toddmotto/angular-1-5-components-app)
+
+
+## We follow this angular styleguide
+[John Papa Angular's StyleGuide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
+
+
 ##Trello
 
 Link with next steps and other features: [link](https://trello.com/b/zIftVbBr/matilha-app-boilerplate)
@@ -82,5 +91,5 @@ gulp watch
 - Code climate integration for mobile and web server
 - Husky Hooks
 
-## This project is based in projects like:
-https://github.com/mwaylabs/generator-m-ionic
+
+
