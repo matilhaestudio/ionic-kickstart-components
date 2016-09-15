@@ -1,12 +1,7 @@
-'use strict';
+angular.module('root', [
+  // load your modules here
+  'common',
+  'components',
+  'templates'
+]);
 
-angular.module('matilhaComoditize',
-  [
-    // Load your modules here
-    'ionic',
-    'ngCordova',
-    'ui.router',
-    'common',
-    'components',
-    'templates'
-  ]);

@@ -25,15 +25,19 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body ng-app="matilhaComoditize">
+  <body ng-app="root">
 
     <!-- the nav bar will be updated as we navigate between views -->
     <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
-    <ion-nav-bar class="bar-energized">
+    <!-- <ion-nav-bar class="bar-energized">
       <ion-nav-back-button></ion-nav-back-button>
-    </ion-nav-bar>
+    </ion-nav-bar> -->
     <!-- the current view will be rendered in the <ion-nav-view> directive -->
-    <ion-nav-view></ion-nav-view>
+    <!-- <ion-nav-view></ion-nav-view> -->
+
+    <root>
+        <span class="loader">Loading...</span>
+    </root>
 
     <!-- will be a 404 during development -->
     <script src="cordova.js"></script>
@@ -62,9 +66,7 @@
     <!-- inject:js -->
     <script src="templates.js"></script>
     <script src="rootmodule.js"></script>
-    <script src="components/pages/pages.module.js"></script>
-    <script src="components/pages/main/main.module.js"></script>
-    <script src="components/pages/main/main.component.js"></script>
+    <script src="root.component.js"></script>
     <script src="components/counter/counter.module.js"></script>
     <script src="components/counter/counter.controller.js"></script>
     <script src="components/counter/counter.component.js"></script>
@@ -86,6 +88,8 @@
     <script src="common/sidemenuapp/sidemenu.module.js"></script>
     <script src="common/sidemenuapp/sidemenu.component.js"></script>
     <script src="common/app.module.js"></script>
+    <script src="common/app.controller.js"></script>
+    <script src="common/app.component.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
   </body>
