@@ -8,16 +8,16 @@ angular
   .component('app', app)
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-      // .state('app', {
-      //   url: '/app',
-      //   abstract: true,
-      //   template: '<side-menu-app></side-menu-app>'
-      // })
       .state('app', {
         url: '/app',
         abstract: true,
-        template: '<tabs-menu-app></tabs-menu-app>'
+        template: '<side-menu-app></side-menu-app>'
       })
+      // .state('app', {
+      //   url: '/app',
+      //   abstract: true,
+      //   template: '<tabs-menu-app></tabs-menu-app>'
+      // })
       .state('app.main', {
         url: '/main',
         component: 'login'
