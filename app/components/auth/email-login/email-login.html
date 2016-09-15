@@ -5,19 +5,17 @@
     message="{{ $ctrl.error }}"
     button="Login"
     on-submit="$ctrl.loginUser($event);">
-  </auth-form> 
+  </auth-form>
 </div>
 
 <div class="auth__info">
   <a ui-sref="auth.login">
-    Log in via Social Plats 
+    Log in via Social Plats
   </a>
 </div>
 
 <div class="auth__info">
-  <a ui-sref="auth.register">
+  <a ui-sref="app.register">
     Don't have an account? Create one here.
   </a>
 </div>
-
-
