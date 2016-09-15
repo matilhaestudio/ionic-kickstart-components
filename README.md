@@ -10,9 +10,9 @@ Comoditize - A silly word created by us that means 'to make a commodity', turn s
 
 This is a project based on Ionic Framework and uses components architecture. This project aims to provide codes for the most common features for mobile and web apps. We are currently launching this project and it is not stable at all.
 
-##
+##Trello
 
-Trello link for next steps and other features: [link](https://trello.com/b/zIftVbBr/matilha-app-boilerplate)
+Link with next steps and other features: [link](https://trello.com/b/zIftVbBr/matilha-app-boilerplate)
 
 ## Dependencies
 ```
