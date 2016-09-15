@@ -9,17 +9,14 @@ angular
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       // .state('app', {
-      //   redirectTo: 'contacts',
       //   url: '/app',
-      //   data: {
-      //     requiredAuth: true
-      //   },
-      //   component: 'app'
+      //   abstract: true,
+      //   template: '<side-menu-app></side-menu-app>'
       // })
       .state('app', {
         url: '/app',
         abstract: true,
-        template: '<side-menu-app></side-menu-app>'
+        template: '<tabs-menu-app></tabs-menu-app>'
       })
       .state('app.main', {
         url: '/main',
