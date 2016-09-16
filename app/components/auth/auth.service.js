@@ -26,6 +26,7 @@ function AuthService ($firebaseAuth) {
       .then(storeAuthData);
   };
   this.logout = function () {
+    window.localStorage.removeItem('logged');
     return auth
       .$signOut()
       .then(clearAuthData);

@@ -10,14 +10,13 @@ function LoginController (AuthService, $state) {
     };
   };
   ctrl.loginUser = function (event) {
-    // return AuthService
-    //   .login(event.user)
-    //   .then(function () {
-    //     $state.go('app');
-    //   }, function (reason) {
-    //     ctrl.error = reason.message;
-    //   });
-    $state.go('main');
+    return AuthService
+      .login(event.user)
+      .then(function () {
+        $state.go('app.main');
+      }, function (reason) {
+        ctrl.error = reason.message;
+      });
   };
 }
 

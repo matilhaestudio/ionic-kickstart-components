@@ -13,6 +13,7 @@ function EmailLoginController (AuthService, $state) {
     return AuthService
       .login(event.user)
       .then(function () {
+        window.localStorage.setItem('logged', true)
         $state.go('app.main');
       }, function (reason) {
         ctrl.error = reason.message;
