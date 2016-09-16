@@ -13,7 +13,7 @@ function EmailLoginController (AuthService, $state) {
     return AuthService
       .login(event.user)
       .then(function () {
-        $state.go('app');
+        $state.go('app.main');
       }, function (reason) {
         ctrl.error = reason.message;
       });

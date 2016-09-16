@@ -1,21 +1,23 @@
-<div class="auth">
-  <h1>Login</h1>
-  <facebook-login
-  user="$ctrl.user"
-  on-submit="$ctrl.loginUser($event);">
-  </facebook-login>
-</div>
+<ion-view view-title="Login" cache-view="false" can-swipe-back="false">
+  <ion-content class="padding">
+    <div class="auth">
+      <h1>Login</h1>
+      <facebook-login
+        user="$ctrl.user"
+        on-submit="$ctrl.loginUser($event);">
+      </facebook-login>
+    </div>
 
-<div class="auth__info">
-  <a ui-sref="auth.email">
-    Log in via email
-  </a>
-</div>
+    <div class="auth__info">
+      <a ui-sref="auth.email">
+        Log in via email
+      </a>
+    </div>
 
-<div class="auth__info">
-  <a ui-sref="auth.register">
-    Don't have an account? Create one here.
-  </a>
-</div>
-
-
+    <div class="auth__info">
+      <a ui-sref="auth.register">
+        Don't have an account? Create one here.
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
