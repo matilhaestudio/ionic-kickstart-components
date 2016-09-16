@@ -1,8 +1,7 @@
 'use strict';
 
 var account = {
-  templateUrl: './account.html',
-  //controller: 'RegisterController'
+  templateUrl: './account.html'
 };
 
 angular
