@@ -2,6 +2,15 @@
   <ion-content class="padding">
     <div class="auth">
       <h1>Login</h1>
+
+      <auth-form
+        user="$ctrl.user"
+        message="{{ $ctrl.error }}"
+        button="Login"
+        on-submit="$ctrl.loginUser($event);">
+      </auth-form>
+
+
       <facebook-login
         user="$ctrl.user"
         on-submit="$ctrl.loginUser($event);">
@@ -15,7 +24,7 @@
 
     <div class="auth__info">
       <a ui-sref="auth.email">
-        Log in via email
+        Recover Password
       </a>
     </div>
 

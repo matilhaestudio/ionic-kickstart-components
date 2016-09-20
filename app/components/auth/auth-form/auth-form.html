@@ -1,11 +1,11 @@
 <form name="authForm" novalidate ng-submit="$ctrl.submitForm();" class="list">
   <label class="item item-input">
-    <span class="input-label">Username</span>
+    <span class="input-label">E-mail</span>
     <input
       type="email"
       name="email"
       required="required"
-      placeholder="Enter your email"
+      placeholder="Enter your e-mail"
       ng-model="$ctrl.user.email">
   </label>
   <label class="item item-input">
@@ -18,7 +18,7 @@
       ng-model="$ctrl.user.password">
   </label>
   <div class="auth-button">
-    <button type="submit" class="button button-block button-assertive" ng-disabled="authForm.$invalid">
+    <button type="submit" class="button button-block button-positive" ng-disabled="authForm.$invalid">
       {{ $ctrl.button }}
     </button>
   </div>

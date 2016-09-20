@@ -13,11 +13,24 @@ function LoginController (AuthService, $state) {
     return AuthService
       .login(event.user)
       .then(function () {
+        window.localStorage.setItem('logged', true)
         $state.go('app.main');
       }, function (reason) {
-        ctrl.error = reason.message;
+        ctrl.error = ctrl.changeErrorMessage(reason)
       });
   };
+  ctrl.changeErrorMessage = function(error) {
+    switch(error.code) {
+      case 'INVALID_PASSWORD':
+        return 'Invalid password';
+      case 'INVALID_USER':
+        return 'Invalid user';
+      case 'INVALID_EMAIL':
+        return 'Invalid email';
+      default:
+        return error.code;
+    }
+  }
 }
 
 angular
