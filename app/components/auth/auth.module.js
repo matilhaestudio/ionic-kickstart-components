@@ -8,16 +8,18 @@ angular
   .config(function ($firebaseRefProvider) {
 
     var config = {
-      apiKey: 'AIzaSyCsNISt3dFx7dy5AImIIk62jDDd0OLvZK0',
-      authDomain: 'contacts-manager-e486f.firebaseapp.com',
-      databaseURL: 'https://contacts-manager-e486f.firebaseio.com',
-      storageBucket: 'contacts-manager-e486f.appspot.com',
+      apiKey: 'AIzaSyAWhBMQMGvrkD3nVgAlMr4yGMvrvS827jE',
+      authDomain: 'matilha-boilerplate.firebaseapp.com',
+      databaseURL: 'https://matilha-boilerplate.firebaseio.com',
+      storageBucket: "matilha-boilerplate.appspot.com",
+      messagingSenderId: "902812459557"
     };
 
     $firebaseRefProvider
       .registerUrl({
         default: config.databaseURL,
-        contacts: config.databaseURL + '/contacts'
+        contacts: config.databaseURL + '/contacts',
+        users: config.databaseURL + '/users'
       });
 
     firebase.initializeApp(config);

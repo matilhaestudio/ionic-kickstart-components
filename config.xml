@@ -16,6 +16,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-intent href="*.firebaseio.com" />
+    <allow-intent href="auth.firebase.com" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
@@ -29,4 +31,5 @@
         <variable name="APP_ID" value="864686546996436" />
         <variable name="APP_NAME" value="Boilerplate" />
     </plugin>
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0" />
 </widget>

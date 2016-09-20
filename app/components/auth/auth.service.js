@@ -26,12 +26,20 @@ function AuthService ($firebaseAuth, $cordovaFacebook, $http) {
         format: "json"
       }
     })
-  };
+  }
+  function googleLogin () {
+    var auth = firebase.auth();
+    var provider = new firebase.auth.GoogleAuthProvider();
+    return auth.signInWithPopup(provider)
+  }
   this.facebookLogin = function () {
     return facebookLogin();
   };
   this.getFacebookInformations = function (acessToken) {
     return getFacebookInformations(acessToken);
+  };
+  this.googleLogin = function () {
+    return googleLogin();
   };
   this.login = function (user) {
     return auth
