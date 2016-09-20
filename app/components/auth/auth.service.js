@@ -65,6 +65,11 @@ function AuthService ($firebaseAuth, $cordovaFacebook, $http, $firebaseArray, $f
       scope: "email"
     });
   };
+  function resetPassoword(email) {
+    return ref.resetPassword({
+      email: email
+    })
+  };
   this.facebookLogin = function () {
     return facebookLogin();
   };
@@ -81,6 +86,9 @@ function AuthService ($firebaseAuth, $cordovaFacebook, $http, $firebaseArray, $f
       .then(function(authData) {
         this.login(user)
       }.bind(this));
+  };
+  this.resetPassoword = function(email) {
+    return resetPassoword(email)
   };
   this.logout = function () {
     window.localStorage.removeItem('logged');
