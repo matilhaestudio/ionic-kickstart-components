@@ -11,7 +11,6 @@ function GoogleLoginController (AuthService, $state) {
     AuthService.googleLogin()
       .then(function(data) {
         window.localStorage.setItem('logged', true);
-        console.log(data)
         $state.go('app.main');
       }).catch(function(error) {
         ctrl.message = error.message;

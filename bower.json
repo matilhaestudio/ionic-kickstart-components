@@ -12,8 +12,8 @@
     "angular-translate": "~2.11.0",
     "angular-translate-loader-static-files": "~2.11.0",
     "localforage": "~1.4.0",
-    "angularfire": "^2.0.2",
-    "firebase": "^3.3.0",
+    "firebase": "^2.2.4",
+    "angularfire": "^1.2.0",
     "angular-ui-router": "git@github.com:matilhaestudio/angular-ui-router.git"
   },
   "devDependencies": {

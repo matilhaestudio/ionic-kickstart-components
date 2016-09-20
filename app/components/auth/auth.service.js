@@ -1,7 +1,9 @@
 'use strict';
 
 function AuthService ($firebaseAuth, $cordovaFacebook, $http) {
-  var auth = $firebaseAuth();
+  // var auth = $firebaseAuth();
+  var usersRef = new Firebase("https://boilerplate-matilha.firebaseio.com/users");
+  var auth = $firebaseAuth(usersRef);
   var authData = null;
 
   function storeAuthData (response) {
@@ -16,21 +18,10 @@ function AuthService ($firebaseAuth, $cordovaFacebook, $http) {
     authData = null;
   }
   function facebookLogin () {
-    return $cordovaFacebook.login(["public_profile", "email"], {redirect_uri: "http://localhost:8000/#/app/main"})
-  }
-  function getFacebookInformations (acessToken) {
-    return $http.get("https://graph.facebook.com/v2.2/me", {
-      params: {
-        access_token: acessToken,
-        fields: "name, email, gender, location, picture",
-        format: "json"
-      }
-    })
+    return usersRef.authWithOAuthPopup("facebook")
   }
   function googleLogin () {
-    var auth = firebase.auth();
-    var provider = new firebase.auth.GoogleAuthProvider();
-    return auth.signInWithPopup(provider)
+    return usersRef.authWithOAuthPopup("google")
   }
   this.facebookLogin = function () {
     return facebookLogin();
@@ -53,8 +44,8 @@ function AuthService ($firebaseAuth, $cordovaFacebook, $http) {
   };
   this.logout = function () {
     window.localStorage.removeItem('logged');
-    return auth
-      .$signOut()
+    return usersRef
+      .unauth()
       .then(clearAuthData);
   };
   this.requireAuthentication = function () {
