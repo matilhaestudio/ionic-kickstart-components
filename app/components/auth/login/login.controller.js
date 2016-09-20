@@ -10,15 +10,27 @@ function LoginController (AuthService, $state) {
     };
   };
   ctrl.loginUser = function (event) {
-    // return AuthService
-    //   .login(event.user)
-    //   .then(function () {
-    //     $state.go('app');
-    //   }, function (reason) {
-    //     ctrl.error = reason.message;
-    //   });
-    $state.go('main');
+    return AuthService
+      .login(event.user)
+      .then(function () {
+        window.localStorage.setItem('logged', true)
+        $state.go('app.main');
+      }, function (reason) {
+        ctrl.error = ctrl.changeErrorMessage(reason)
+      });
   };
+  ctrl.changeErrorMessage = function(error) {
+    switch(error.code) {
+      case 'INVALID_PASSWORD':
+        return 'Invalid password';
+      case 'INVALID_USER':
+        return 'Invalid user';
+      case 'INVALID_EMAIL':
+        return 'Invalid email';
+      default:
+        return error.code;
+    }
+  }
 }
 
 angular

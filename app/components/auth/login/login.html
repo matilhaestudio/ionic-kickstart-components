@@ -1,21 +1,37 @@
-<div class="auth">
-  <h1>Login</h1>
-  <facebook-login
-  user="$ctrl.user"
-  on-submit="$ctrl.loginUser($event);">
-  </facebook-login>
-</div>
+<ion-view view-title="Login" cache-view="false" can-swipe-back="false">
+  <ion-content class="padding">
+    <div class="auth">
+      <h1>Login</h1>
 
-<div class="auth__info">
-  <a ui-sref="auth.email">
-    Log in via email
-  </a>
-</div>
-
-<div class="auth__info">
-  <a ui-sref="auth.register">
-    Don't have an account? Create one here.
-  </a>
-</div>
+      <auth-form
+        user="$ctrl.user"
+        message="{{ $ctrl.error }}"
+        button="Login"
+        on-submit="$ctrl.loginUser($event);">
+      </auth-form>
 
 
+      <facebook-login
+        user="$ctrl.user"
+        on-submit="$ctrl.loginUser($event);">
+      </facebook-login>
+
+      <google-login
+        user="$ctrl.user"
+        on-submit="$ctrl.loginUser($event);">
+      </google-login>
+    </div>
+
+    <div class="auth__info">
+      <a ui-sref="auth.recover-password">
+        Forget your password?
+      </a>
+    </div>
+
+    <div class="auth__info">
+      <a ui-sref="auth.register">
+        Don't have an account? Create one here.
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

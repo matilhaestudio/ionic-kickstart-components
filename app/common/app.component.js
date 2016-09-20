@@ -11,13 +11,13 @@ angular
       .state('app', {
         url: '/app',
         abstract: true,
-        template: '<side-menu-app></side-menu-app>'
+        template: '<side-menu-app></side-menu-app>', // or change this to <tabs-menu-app></tabs-menu-app>
+        onEnter: function($state) {
+          if(!window.localStorage.getItem('logged')) {
+            $state.go('auth.login')
+          }
+        }
       })
-      // .state('app', {
-      //   url: '/app',
-      //   abstract: true,
-      //   template: '<tabs-menu-app></tabs-menu-app>'
-      // })
       .state('app.main', {
         url: '/main',
         component: 'account'

@@ -1,6 +1,6 @@
 'use strict';
 
-function FacebookLoginController (AuthService, $cordovaFacebook, $state, $http) {
+function GoogleLoginController (AuthService, $state) {
   var ctrl = this;
   ctrl.$onChanges = function (changes) {
     if (changes.user) {
@@ -8,11 +8,11 @@ function FacebookLoginController (AuthService, $cordovaFacebook, $state, $http) 
     }
   };
   ctrl.submitForm = function () {
-    AuthService.facebookLogin()
-      .then(function(data){
+    AuthService.googleLogin()
+      .then(function(data) {
         window.localStorage.setItem('logged', true);
         $state.go('app.main');
-      }).catch(function(error){
+      }).catch(function(error) {
         ctrl.message = error.message;
       });
   };
@@ -20,4 +20,4 @@ function FacebookLoginController (AuthService, $cordovaFacebook, $state, $http) 
 
 angular
   .module('components.auth')
-  .controller('FacebookLoginController', FacebookLoginController);
+  .controller('GoogleLoginController', GoogleLoginController);
