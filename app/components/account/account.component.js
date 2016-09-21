@@ -1,7 +1,8 @@
 'use strict';
 
 var account = {
-  templateUrl: './account.html'
+  templateUrl: './account.html',
+  controller: 'AccountController'
 };
 
 angular
@@ -12,5 +13,9 @@ angular
       .state('account', {
         url: '/account',
         component: 'account'
+      })
+      .state('account.faq', {
+        url: '/faq',
+        component: 'faq'
       });
   });

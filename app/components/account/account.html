@@ -1,6 +1,44 @@
 <ion-view name="content" view-title="Account" cache-view="false" can-swipe-back="false">
   <ion-content class="padding">
     <h1>Account</h1>
-    <h1>Account</h1>
+    <h1 class="text-center">Account</h1>
+
+    <ul class="list">
+      <li class="item item-toggle">
+        Enable Notifications
+        <label class="toggle toggle-balanced">
+          <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+
+    <div class="list">
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-email"></i>
+        Contact
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-chatboxes"></i>
+        FAQ
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-person-stalker"></i>
+        Use policy
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-document-text"></i>
+        Terms
+      </a>
+    </div>
   </ion-content>
+
+  <div class="bar bar-footer bar-positive">
+    <div class="title">Version {{$ctrl.version}}</div>
+  </div>
 </ion-view>
