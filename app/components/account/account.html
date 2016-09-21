@@ -3,17 +3,28 @@
     <h1>Account</h1>
     <h1 class="text-center">Account</h1>
 
-    <ul class="list">
-      <li class="item item-toggle">
-        Enable Notifications
-        <label class="toggle toggle-balanced">
-          <input type="checkbox">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </li>
-    </ul>
+    <div class="list">
+      <form name="userInformations">
+        <input-cep placeholder="12345-678" label="CEP" model="$ctrl.cep" required="true"></input-cep>
+        <input-cpf placeholder="123.456.789-01" label="CPF" model="$ctrl.cpf" required="true"></input-cpf>
+        <input-email placeholder="me@amazing.com" label="E-mail" model="$ctrl.email" required="true"></input-email>
+        <input-phone placeholder="(00) 12345-6789" label="Phone" model="$ctrl.phone" required="true"></input-phone>
+
+        <ul class="list">
+          <li class="item item-toggle">
+            Enable Notifications
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="$ctrl.enableNotifications">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+        </ul>
+
+        <button class="button button-outline button-positive button-block" ng-disabled="userInformations.$invalid">Save</button>
+      </form>
+    </div>
 
     <div class="list">
       <a class="item item-icon-left" ui-sref="app.contact">
@@ -35,10 +46,10 @@
         <i class="icon ion-document-text"></i>
         Terms
       </a>
+
+      <a class="item text-center">
+        Version {{$ctrl.version}}
+      </a>
     </div>
   </ion-content>
-
-  <div class="bar bar-footer bar-positive">
-    <div class="title">Version {{$ctrl.version}}</div>
-  </div>
 </ion-view>

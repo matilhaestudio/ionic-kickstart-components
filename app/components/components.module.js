@@ -2,5 +2,7 @@
 
 angular.module('components', [
   'components.auth',
-  'components.account'
+  'components.account',
+  'components.inputs',
+  'components.buttons'
 ]);
