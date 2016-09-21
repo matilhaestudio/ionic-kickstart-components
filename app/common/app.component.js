@@ -22,9 +22,21 @@ angular
         url: '/main',
         component: 'account'
       })
-      .state('app.register', {
-        url: '/register',
-        component: 'register'
+      .state('app.contact', {
+        url: '/contact',
+        component: 'contact'
+      })
+      .state('app.faq', {
+        url: '/faq',
+        component: 'faq'
+      })
+      .state('app.policy', {
+        url: '/policy',
+        component: 'policy'
+      })
+      .state('app.terms', {
+        url: '/terms',
+        component: 'terms'
       })
       //$urlRouterProvider.otherwise('/auth/login');
       $urlRouterProvider.otherwise('/app/main');
