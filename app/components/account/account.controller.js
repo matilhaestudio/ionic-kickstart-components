@@ -1,9 +1,9 @@
 'use strict';
 
-function AccountController () {
+function AccountController (appInformation) {
   var ctrl = this;
 
-  ctrl.version = '0.0.1'
+  ctrl.version = appInformation.version
 }
 
 angular.module('components.account').controller('AccountController', AccountController);
