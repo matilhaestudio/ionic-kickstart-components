@@ -3,7 +3,8 @@ angular
     'ui.router',
     'angular-loading-bar',
     'common.tabsmenuapp',
-    'common.sidemenuapp'
+    'common.sidemenuapp',
+    'common.staticpages'
   ])
   .run(function ($transitions, cfpLoadingBar) {
     $transitions.onStart({}, cfpLoadingBar.start);

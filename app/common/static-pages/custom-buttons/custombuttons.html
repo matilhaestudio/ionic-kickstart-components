@@ -1,0 +1,26 @@
+<ion-view name="content" view-title="Custom Buttons" cache-view="false" can-swipe-back="true">
+  <ion-content class="padding">
+    <h1>Account</h1>
+    <h1 class="text-center">Custom Buttons Example</h1>
+
+    <base-button
+      icon="ion-navicon-round"
+      text="Back"
+      route="app.main">
+    </base-button>
+
+    <hr>
+
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Message to Share" ng-model="$ctrl.shareMessage"/>
+      </label>
+
+      <label class="item item-input">
+        <input type="text" placeholder="URL to Share" ng-model="$ctrl.shareUrl" />
+      </label>
+    </div>
+    <share-button message="$ctrl.shareMessage" url="$ctrl.shareUrl"></share-button>
+
+  </ion-content>
+</ion-view>

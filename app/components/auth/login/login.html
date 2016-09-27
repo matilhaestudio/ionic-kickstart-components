@@ -1,7 +1,7 @@
 <ion-view view-title="Login" cache-view="false" can-swipe-back="false">
   <ion-content class="padding">
     <div class="auth">
-      <h1>Login</h1>
+      <h1 class="text-center">Login</h1>
 
       <auth-form
         user="$ctrl.user"
@@ -10,6 +10,7 @@
         on-submit="$ctrl.loginUser($event);">
       </auth-form>
 
+      <hr>
 
       <facebook-login
         user="$ctrl.user"
