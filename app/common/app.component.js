@@ -38,6 +38,10 @@ angular
         url: '/terms',
         component: 'terms'
       })
+      .state('app.custom-buttons', {
+        url: '/custom-buttons',
+        component: 'custombuttons'
+      })
       //$urlRouterProvider.otherwise('/auth/login');
       $urlRouterProvider.otherwise('/app/main');
   });

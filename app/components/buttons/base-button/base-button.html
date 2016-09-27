@@ -1,0 +1,11 @@
+<a ng-if="$ctrl.route" ui-sref="{{$ctrl.route}}" class="button button-outline button-positive" ng-disabled="$ctrl.disableExpression">
+  <i class="{{$ctrl.icon}}">
+    {{$ctrl.text}}
+  </i>
+</a>
+
+<a ng-if="!$ctrl.route" ng-click="$ctrl.onClick()" class="button button-outline button-positive" ng-disabled="$ctrl.disableExpression">
+  <i class="{{$ctrl.icon}}">
+    {{$ctrl.text}}
+  </i>
+</a>
